@@ -1,0 +1,104 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > EmployeeDTO</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">in.kp.main.dtos</a>
+</div>
+
+<h1>Coverage Summary for Class: EmployeeDTO (in.kp.main.dtos)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+</tr>
+<tr>
+  <td class="name">EmployeeDTO</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package in.kp.main.dtos;
+&nbsp;
+&nbsp;import in.kp.main.entities.enums.Role;
+&nbsp;import jakarta.validation.constraints.*;
+&nbsp;import lombok.*;
+&nbsp;
+&nbsp;@Getter
+&nbsp;@Setter
+&nbsp;@NoArgsConstructor
+&nbsp;@AllArgsConstructor
+&nbsp;@ToString
+&nbsp;@Builder
+&nbsp;public class EmployeeDTO {
+&nbsp;
+&nbsp;    private Long id;
+&nbsp;
+&nbsp;    @NotBlank(message = &quot;NAME FIELD CAN NOT BE BLANK&quot;)
+&nbsp;    @Size(min = 2, max = 30, message = &quot;LENGTH MUST BE GREATER THAN 2 AND LESS THAN 30&quot;)
+&nbsp;    private String name;
+&nbsp;
+&nbsp;    @NotBlank(message = &quot;EMAIL FIELD CAN NOT BE BLANK&quot;)
+&nbsp;    @Email(message = &quot;EMAIL MUST BE VALID&quot;)
+&nbsp;    private String email;
+&nbsp;
+&nbsp;    @NotBlank(message = &quot;PASSWORD FIELD CAN NOT BE BLANK&quot;)
+&nbsp;    private String password;
+&nbsp;
+&nbsp;    @NotNull(message = &quot;AGE FIELD CAN NOT BE NULL&quot;)
+&nbsp;    @Min(value = 18, message = &quot;AGE MUST BE GREATER THAN 18 &quot;)
+&nbsp;    @Max(value = 45, message = &quot;AGE MUST BE LESS THAN 45&quot;)
+&nbsp;    private Integer age;
+&nbsp;
+&nbsp;    @NotNull(message = &quot;ROLE FIELD CAN NOR BE NULL&quot;)
+&nbsp;    private Role role;
+&nbsp;
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2026-05-22 11:55</div>
+</div>
+</body>
+</html>

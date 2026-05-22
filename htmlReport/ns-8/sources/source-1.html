@@ -1,0 +1,109 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > Employee</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">in.kp.main.entities</a>
+</div>
+
+<h1>Coverage Summary for Class: Employee (in.kp.main.entities)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+</tr>
+  <tr>
+    <td class="name">Employee$HibernateInstantiator</td>
+  </tr>
+  <tr>
+    <td class="name">Employee$HibernateProxy</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package in.kp.main.entities;
+&nbsp;
+&nbsp;import in.kp.main.entities.enums.Role;
+&nbsp;import jakarta.persistence.*;
+&nbsp;import lombok.*;
+&nbsp;
+&nbsp;@Getter
+&nbsp;@Setter
+&nbsp;@NoArgsConstructor
+&nbsp;@AllArgsConstructor
+&nbsp;@ToString
+&nbsp;@Builder
+&nbsp;@Entity
+&nbsp;@Table(name = &quot;employees&quot;)
+&nbsp;public class Employee {
+&nbsp;    @Id
+&nbsp;    @GeneratedValue(strategy = GenerationType.AUTO)
+&nbsp;    private Long id;
+&nbsp;
+&nbsp;    @Column(name = &quot;employee_name&quot;, nullable = false)
+&nbsp;    private String name;
+&nbsp;
+&nbsp;    @Column(name = &quot;employee_email&quot;, nullable = false)
+&nbsp;    private String email;
+&nbsp;
+&nbsp;    @Column(name = &quot;employee_password&quot;, nullable = false)
+&nbsp;    private String password;
+&nbsp;
+&nbsp;    @Column(name = &quot;employee_age&quot;, nullable = false)
+&nbsp;    private Integer age;
+&nbsp;
+&nbsp;    @Enumerated(EnumType.STRING)
+&nbsp;    @Column(name = &quot;employee_role&quot;, nullable = false)
+&nbsp;    private Role role;
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2026-05-22 11:55</div>
+</div>
+</body>
+</html>

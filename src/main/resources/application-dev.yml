@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/sbtesting
+    username: root
+    password:
+
+server:
+  port: 7777

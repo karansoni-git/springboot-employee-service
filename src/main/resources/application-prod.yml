@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:mariadb://${DB_HOST_URL}:3306/${DB_NAME}?sslMode=true&requireSSL=true
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.mariadb.jdbc.Driver
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDBDialect
+
+server:
+  port: 7779
