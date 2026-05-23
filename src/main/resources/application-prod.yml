@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mariadb://${DB_HOST_URL}:3306/${DB_NAME}?sslMode=true&requireSSL=true
+    url: jdbc:mariadb://${DB_HOST_URL}:3306/${DB_NAME}
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
     driver-class-name: org.mariadb.jdbc.Driver
@@ -9,6 +9,13 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MariaDBDialect
+    hibernate:
+      ddl-auto: validate
+
+  #flyway configuration
+  flyway:
+    baseline-on-migrate: true
+    enabled: true
 
 server:
   port: 7779

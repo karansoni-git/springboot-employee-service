@@ -14,7 +14,7 @@ import lombok.*;
 @Table(name = "employees")
 public class Employee {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "employee_name", nullable = false)
@@ -32,4 +32,7 @@ public class Employee {
     @Enumerated(EnumType.STRING)
     @Column(name = "employee_role", nullable = false)
     private Role role;
+
+    @ManyToOne
+    private Department department;
 }
